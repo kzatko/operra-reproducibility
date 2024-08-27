@@ -48,7 +48,7 @@
 -   [ ] Matlab
 -   [ ] Other
 
-### What Integrated Developing Environment do you use? 
+### What Integrated Development Environment do you use? 
 -   [ ] Rstudio 
 -   [ ] VS Code 
 -   [ ] Other 
