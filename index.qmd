@@ -1,0 +1,54 @@
+---
+title: Dynamic reporting with Quarto ... 
+subtitle: Workshop at UNIGE 
+sidebar: false
+image: "assets/narrow_alps.png"
+date: last-modified
+author: 
+  - name: 'Gorka Fraga Gonzalez'
+    orcid: 0000-0002-1857-8607
+    #affiliations:
+      #- name: Center for Reproducible Science, University of Zurich
+
+  - name: 'Fabio Molo'
+    orcid: 0000-0001-9320-5854
+#    affiliations:
+      #- name: Center for Reproducible Science, University of Zurich
+
+#about:
+  #template: broadside
+  #image: "assets/narrow_alps.png"
+  #image-title: ALPS
+  #image-shape: rectangle
+  #links:
+    #- text: CRS
+     # href: "https://www.crs.uzh.ch/en.html"
+  #  - icon:  git
+  #    aria-label: Gitlab
+  #    href: "https://gitlab.uzh.ch/crsuzh/Workshop_Quarto_2024_UNIGE"
+#    - icon: linkedin
+#      aria-label: "LinkedIn"
+ #     href: "https://www.linkedin.com/company/center-for-reproducible-science"  
+listing:
+  #categories: true
+  type: grid
+  id: main-listing
+  fields: [title, image]
+  #grid-columns: 1
+  #grid-item-align: center
+  #sort-ui: true
+  #filter-ui: true
+  sort: false  
+  contents: 
+    - contents/instructions/*.qmd
+    - contents/slides/*.qmd
+    - contents/demo/*.qmd
+    
+toc: false
+page-layout: full
+
+---
+
+Welcome to the workshop on Dynamic reporting with Quarto 
+
+

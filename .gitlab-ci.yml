@@ -1,19 +1,25 @@
-# This file is a template, and might need editing before it works on your project.
-# To contribute improvements to CI/CD templates, please follow the Development guide at:
-# https://docs.gitlab.com/ee/development/cicd/templates.html
-# This specific template is located at:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
-
-# Full project: https://gitlab.com/pages/plain-html
-image: busybox
+image: rocker/verse:4.3
 
 pages:
   stage: deploy
-  environment: production
-  script:
-    - echo "The site will be deployed to $CI_PAGES_URL"
-  artifacts:
+  before_script:    
+  - R -e "install.packages('remotes')"  # This package is used to be able to install packages defining their versions0  
+  - R -e "remotes::install_version('quarto',version = '1.4')" # This is used for publishing the website 
+  - R -e "remotes::install_version('kableExtra', version = '1.4.0')"  # This is used for rendering a table 
+  - R -e "remotes::install_version('openxlsx',version = '4.2.5.2')" # This package is used for reading excel table
+  - R -e "remotes::install_version('crosstalk', version = '1.2.1')" # This is used for adding filters to the table
+  - R -e "remotes::install_version('DT', version = '0.32')"    # Used for rendering an interactive table 
+  - R -e "remotes::install_version('here', version = '1.0.1')"    # Used for some path handling 
+    
+  script: 
+  - cd webpage_contents
+  - R -e "quarto::quarto_render()"       
+  - cp -r ../_site/* ../public/  
+ 
+  artifacts:    
     paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - public    
+   
+  only:
+  - master
+  interruptible: true
