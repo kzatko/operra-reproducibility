@@ -29,9 +29,9 @@ WebURL : [https://crsuzh.pages.uzh.ch/Workshop_Quarto_2024_UNIGE ](https://crsuz
 -  Gitlab pages, Github pages 
 
 ## Part 3 - Workflows for dissemination and publication
-### 'Persistent' identification: DOI (Zenodo and OSF)
-### Repository snapshot (Gitlab releases) 
-### Quarto websites + Gitlab pages 
+- 'Persistent' identification: DOI (Zenodo and OSF)
+-  Repository snapshots (Gitlab releases) 
+-  Quarto websites + Gitlab pages 
 
 
 ________________
