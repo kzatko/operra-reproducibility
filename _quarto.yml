@@ -10,9 +10,7 @@ website:
           Made with [![](https://quarto.org/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/) \
           \ by the [Center for Reproducible Science](https://www.crs.uzh.ch/en.html)
         
-        center: | 
-            ![](assets/Logo_CRS_col.svg){fig-alt="CRS" width=35px}
-        
+       
         right: |
            Free under the [CC BY international license 4.0 ](https://creativecommons.org/licenses/by/4.0/). \
            \ Source code on [![](https://images.ctfassets.net/xz1dnu24egyd/1hnQd13UBU7n5V0RsJcbP3/769692e40a6d528e334b84f079c1f577/gitlab-logo-100.png){fig-alt="Git" width=65px}](https://gitlab.uzh.ch/crsuzh/Workshop_Quarto_2024_UNIGE) 
