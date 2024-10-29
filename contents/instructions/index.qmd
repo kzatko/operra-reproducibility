@@ -28,7 +28,7 @@ Please also make sure to have a working version of LaTeX installed (as above).
 
 
 ## Alternative: working from the R Posit cloud 
-If you do not want to install anything in your computer you can also use a cloud version of R and RStudio. Sign up at the **Posit Cloud** <https://login.posit.cloud> and:
+If you do not want to install anything on your computer you can also use a cloud version of R and RStudio. Sign up at the **Posit Cloud** <https://login.posit.cloud> and:
 
 -  register with your email address and give a password;
 -  select the "Free Cloud" subscription option.
