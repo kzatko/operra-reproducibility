@@ -15,9 +15,8 @@ pages:
   - R -e "remotes::install_version('here', version = '1.0.1')"    # Used for some path handling 
     
   script: 
-  - cd contents
   - quarto render 
-  - cp -r ../_site/* ../public/  
+  - cp -r ./_site/* ./public/  
  
   artifacts:    
     paths:
