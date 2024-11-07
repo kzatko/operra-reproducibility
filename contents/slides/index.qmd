@@ -1,7 +1,6 @@
 ---
-title: |
-  Dynamic reporting \ 
-  for reproducible data analysis
+title: "  Dynamic reporting \ 
+  for reproducible data analysis"
 subtitle: A Workshop by the Center for Reproducible Science
 date:  "November 07, 2024"
 date-format: long
@@ -17,16 +16,15 @@ editor: visual
 preview-links: true
 format: 
   revealjs:
-    smaller: true
     menu: false
-    auto-stretch: false
-    fig-align: left
-    #theme: custom-theme.scss
+    logo: "images/uzh_logo_d_pos_web_assoc.jpg"
+    #theme: "custom-theme.scss"
     embed-resources: true
     progress: true
     slide-number: true
-    footer:   University of Zurich | Center for Reproducible Science
-    #<a href="https://crsuzh.pages.uzh.ch/Workshop_Quarto_2024_UNIGE" target="_blank"> ⏎ home </a>
+    progress: true
+    slide-number: true
+    footer: "Center for Reproducible Science | <a href='https://crsuzh.pages.uzh.ch/Workshop_Quarto_2024_UNIGE' target='_blank'> Home </a>"
     title-slide-attributes:
       #data-background-image: narrow_alps.png
       data-background-size: contain
@@ -181,7 +179,7 @@ Dynamic reporting
 <br>
 
 |                  | Code             | Markup   | Output formats                  |
-|---------------------|-----------------|-----------------|-----------------|
+|--------------------|-----------------|-----------------|-----------------|
 | knitr .Rnw       | R                | LaTeX    | pdf, tex                        |
 | R Markdown       | R                | Markdown | pdf, html, docx, pptx, tex      |
 | Jupyter Notebook | Julia, Python, R | Markdown | pdf, html, tex, py, ...         |
