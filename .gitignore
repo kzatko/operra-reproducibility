@@ -2,6 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-/_site/
-/_freeze/
+_site/
+_freeze/
+.quarto/
+
 /.quarto/
+_site 
+_freeze  

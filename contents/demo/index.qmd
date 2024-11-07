@@ -10,13 +10,12 @@ title: Demo
   #contents: *.qmd
 format:
   html:
-    output-file: 'xxxx'
     toc-depth: 4
   pdf: default
   #revealjs: default
 execute: 
   eval: true
-
+bibliography: references.bib
 ---
 
 This demo requires R and Quarto Visit the [instructions](../instructions/index.qmd) page to get ready.
@@ -100,7 +99,6 @@ For this example we will use the data set 'Funding and Research Output Data' <ht
 
 We can read the table into a variable named *tbl* with the following code :
 
-
 ```{r}
 
 url <- 'https://zenodo.org/records/5011201/files/anonymised_funding_output_data.csv?download=1'
@@ -110,7 +108,6 @@ tbl <- read.csv(url, row.names = 1)
 #### Summary of the data
 
 The data is longitudinal, we will summarize the cumulative sum of `n_articles_per_year` and `n_preprints_per_year` per researcher ( `anonym_id`).
-
 
 ```{r}
 
@@ -125,7 +122,6 @@ data_summary <- summarise(
 
 We can render a table summarizing the data. For example:
 
-
 ```{r}
 #| warning: true
 #kableExtra::kable(head(tbl),format = "markdown")
@@ -137,10 +133,13 @@ kable(summary(data_summary)[,2:3],
 
 #### Plot
 
-We can add a code chunk a plot how the number of preprints developed over time.
-
+We can add a code chunk a plot how the number of preprints developed over time. Note that we add some code execution options for a caption and a label that we can use to reference to this figure in the text.
 
 ```{r}
+#| label: fig-preprints
+#| fig-cap: "Number of preprints over the years."
+#| echo: fenced
+
 
 preprints <- summarise(
   group_by(tbl, year),
@@ -152,7 +151,8 @@ ggplot(preprints, aes(x= year, y = n_preprints)) +
   theme_minimal()
 ```
 
- 
+I can now refer to the [@fig-preprints] in the text using `[@fig-label]`.
+
 ### Inline code
 
 Now we can use this data_summary and [inline code](https://quarto.org/docs/computations/inline-code.html) to add a text describing the data using code to read some information from the table.
@@ -165,24 +165,40 @@ Maximum number of publications: \``` r max(data_summary$total_articles)` ``
 
 Median number of publications: \``` r median(data_summary$total_preprints)` ``
 
+### References
+
+You can refer to a file with the reference list in the YAML header. In this example with have the .bib file in the same folder as this .qmd file:
+
+``` yaml
+bibliography: references.bib
+```
+
+Then use `[@authorDate]` to add a citation. For example, we recommend reading this manifesto for reproducible science [@munafo_manifesto_2017] or this nice easy-read entitled `cut with the tyranny of copy-pasting` [@perkel_cut_2022] (yes, it is about R Markdown). 
+
+To get the best out of this functionality 
+
+-   [Connect your R studio project with a Zotero library](https://quarto.org/docs/visual-editor/technical.html#citations-from-zotero)
+
+-   Use the Visual editor in R studio and go to insert>citation
+
+
 ## 4. Render the report
 
 Now that you edit the QMD file with your report:
 
-- [ ]  Check that the YAML header, the text and the code chunks are well delimited and you did not forget, for example, to close any chunk with (\`\`\`).
-- [ ]   Click on the button `Render` with the blue arrow on top of the editor in R studio.
-- [ ]   A  file with the same name as your .qmd file and the format specified in your header should have been created. 
+-   [ ] Check that the YAML header, the text and the code chunks are well delimited and you did not forget, for example, to close any chunk with (\`\`\`).
+-   [ ] Click on the button `Render` with the blue arrow on top of the editor in R studio.
+-   [ ] A file with the same name as your .qmd file and the format specified in your header should have been created.
 
+## 5. Refine the report
 
-
-## 5. Refine the report 
-Try to explore different options for code execution: 
+Try to explore different options for code execution:
 
 -   [ ] Hide all
--   [ ] Print all code but do not execute it 
--   [ ] Fold all code (accessible by clicking on a button when saved an HTML) 
+-   [ ] Print all code but do not execute it
+-   [ ] Fold all code (accessible by clicking on a button when saved an HTML)
 -   [ ] Hide the code reading the table, show the rest
--   [ ] **Challenge** render the report as both an HTML document and as PDF 
+-   [ ] **Challenge** render the report as both an HTML document and as PDF
 
 {{< pagebreak >}}
 
@@ -199,9 +215,11 @@ The are many examples of dynamically generated reports online. Try exploring the
 -   Example 4. Reproducible slides with Quarto: <https://github.com/kjhealy/flipbookr-quarto/tree/main?tab=readme-ov-file>.\
 
 Try to reflect about the following questions:
-  
+
 -   [ ] Can you easily find the repository with the source files?
 -   [ ] What dynamic reporting tool they use?
 -   [ ] Can you access the output, rendered documents easily ?
 -   [ ] Do they use some advanced features for dynamic reporting or computational reproducibility?
 -   [ ] What would be the workflow to reproduce those reports?
+
+### references
