@@ -17,7 +17,7 @@ preview-links: true
 format: 
   revealjs:
     menu: false
-    logo: "images/uzh_logo_d_pos_web_assoc.jpg"
+    logo: "img/uzh_logo_d_pos_web_assoc.jpg"
     #theme: "custom-theme.scss"
     embed-resources: true
     progress: true
