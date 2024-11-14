@@ -13,9 +13,8 @@ listing:
   id: 'slides'
 ---
 
-<iframe allowfullscreen  class="pdf" src="Sharing_and_publishing.pdf"  width="100%" 
-        height="700px" 
-        style="border: 2px solid black;" >
+<iframe allowfullscreen class="pdf" src="Sharing_and_publishing.pdf" width="100%" height="700px" style="border: 2px solid black;">
+
 </iframe>
 
 #### Go to online slides in full screen
