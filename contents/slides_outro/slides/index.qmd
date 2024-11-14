@@ -5,7 +5,7 @@ author: "Fabio Molo and Gorka Fraga Gonzalez"
 editor: visual
 preview-links: true
 listing: 
-  contents: '*.pdf'
+  contents: 'slides'
 format: 
   revealjs:
     pdf: true
