@@ -26,6 +26,7 @@ include-in-header:
 format: 
   revealjs:
     menu: true
+    pdf: true
     smaller: true
     fig-align: left
     logo: "img/uzh_logo_d_pos_web_assoc.jpg"
@@ -216,7 +217,7 @@ Dynamic reporting
 <br>
 
 |                  | Code             | Markup   | Output formats                  |
-|------------------|------------------|----------|---------------------------------|
+|---------------|---------------|---------------|---------------------------|
 | knitr .Rnw       | R                | LaTeX    | pdf, tex                        |
 | R Markdown       | R                | Markdown | pdf, html, docx, pptx, tex      |
 | Jupyter Notebook | Julia, Python, R | Markdown | pdf, html, tex, py, ...         |
