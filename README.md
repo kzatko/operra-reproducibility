@@ -1,6 +1,6 @@
 # Workshop on reproducible and dynamic reporting with Quarto on May 15, 2025 at the University of Zurich
 
-The website for this workshop is: <ADD URL>
+The website for this workshop is: <https://crsuzh.pages.uzh.ch/workshop-quarto-2025-uzh>
 
 
 # Citation 
