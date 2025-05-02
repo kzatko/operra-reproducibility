@@ -7,14 +7,10 @@ pages:
 #  - wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb
 #  - sudo dpkg -i quarto-1.5.57-linux-amd64.deb
 #  - quarto check install  # Ensure Quarto is installed properly
-  - R -e "install.packages('remotes')"  # This package is used to be able to install packages defining their versions0    
-  - R -e "remotes::install_version('kableExtra', version = '1.4.0')"  # This is used for rendering a table 
-  - R -e "remotes::install_version('openxlsx',version = '4.2.5.2')" # This package is used for reading excel table
-  - R -e "remotes::install_version('crosstalk', version = '1.2.1')" # This is used for adding filters to the table
-  - R -e "remotes::install_version('DT', version = '0.32')"    # Used for rendering an interactive table 
-  - R -e "remotes::install_version('here', version = '1.0.1')"    # Used for some path handling 
-  - R -e "remotes::install_version('readr', version = '2.1.5')"    # 
-  - R -e "remotes::install_version('ggbeeswarm', version = '0.7.2')"    # 
+  
+  # Install renv and restore project dependencies
+  - R -e "install.packages('renv')"
+  - R -e "renv::restore(confirm = FALSE)"
 
     
   script: 
