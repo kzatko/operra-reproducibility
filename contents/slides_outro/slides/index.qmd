@@ -23,7 +23,9 @@ format:
 
 ## Sharing scenarios
 
+```{=html}
 <style> .font-small {  font-size: 0.8em;} </style>
+```
 
 These are some frequent use cases:
 

@@ -13,31 +13,11 @@ author:
   - name: 'Samuel Pawel'
     orcid: 0000-0003-2779-320X
 
-#about:
-  #template: broadside
-  #image: "assets/narrow_alps.png"
-  #image-title: ALPS
-  #image-shape: rectangle
-  #links:
-    #- text: CRS
-     # href: "https://www.crs.uzh.ch/en.html"
-  #  - icon:  git
-  #    aria-label: Gitlab
-  #    href: "https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-uzh"
-#    - icon: linkedin
-#      aria-label: "LinkedIn"
- #     href: "https://www.linkedin.com/company/center-for-reproducible-science"  
 listing:
-  #categories: true
   type: grid
-  
   id: main-listing
   fields: [title]
-  #image-height: 210px
   grid-columns: 4
-  #grid-item-align: center
-  #sort-ui: true
-  #filter-ui: true
   sort: false  
   contents: 
     - ./instructions/*.qmd
@@ -56,10 +36,7 @@ In this workshop, the Center for Reproducible Science of the University of Zuric
 
 The workshop will begin with an introductory presentation on the purpose and fundamentals of dynamic reporting. The second part is hands-on, and participants are supported to follow along on their own computers and produce a minimally viable reproducible report. Finally, we will demonstrate an advanced publishing workflow using version control and containerization.
 
-# Installation Instructions and Slides
+# Installation and Slides
 
 ::: {#main-listing}
 :::
-
-
- 

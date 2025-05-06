@@ -16,13 +16,12 @@ website:
            \ Source code on [![](https://images.ctfassets.net/xz1dnu24egyd/1hnQd13UBU7n5V0RsJcbP3/769692e40a6d528e334b84f079c1f577/gitlab-logo-100.png){fig-alt="Git" width=65px}](https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-uzh)
            
            
-    favicon:  'assets/Logo_CRS_col.svg'
+    favicon: 'assets/Logo_CRS_col.svg'
     
     site-url: https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-uzh
     repo-url: https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-uzh
     
-    navbar:        
-        #logo: assets/Logo_CRS_col.svg        
+    navbar:
         collapse-below: lg
         
         right:                  
@@ -40,16 +39,10 @@ format:
     html:         
         grid:
           sidebar-width: 350px
-        theme:
-          light: litera
-          dark: darkly
-        highlight-style: a11y
+        theme: cosmo
         code-link: true
         toc: true
         toc-expand: 4
-        code-copy: true              
-        mermaid: 
-          theme: default
+        code-copy: true
 
 freeze: auto
-

@@ -1,6 +1,6 @@
 ---
-title: Reproducible and Dynamic Reporting with R and Quarto
-subtitle: Demo
+title: Demo
+subtitle: Reproducible and Dynamic Reporting with R and Quarto
 format:
   html:
     toc-depth: 4
