@@ -1,7 +1,7 @@
 ---
 title: | 
   Reproducible and dynamic reporting \
-  with R and Quarto -- geting started
+  with R and Quarto -- getting started
 subtitle: A Workshop by the Center for Reproducible Science
 date:  "May 15, 2025"
 date-format: long
@@ -39,10 +39,12 @@ bibliography: references.bib
 
 ### Computational reproducibility
 
+A (too) simple definition: 
+
 ::: incremental
--   The same analysis\
--   of the same data\
--   obtains the same results
+- The **same analysis**
+- of the **same data**
+- obtains the **same results**
 :::
 
 ------------------------------------------------------------------------
@@ -54,8 +56,8 @@ bibliography: references.bib
 ::: incremental
 -   Attempted to rerun **22,578 Jupyter notebooks** associated with 3,467 publications
 -   For 10,388 of these, all declared dependencies could be installed successfully
--   1,203 notebooks ran through without any errors\
--   **879 notebooks** produced results identical to those reported in the original notebook
+-   1,203 (5%) notebooks ran through without any errors
+-   **879 notebooks (4%)** produced results identical to those reported in the original notebook
 :::
 
 ------------------------------------------------------------------------
@@ -128,18 +130,19 @@ bibliography: references.bib
 
 ### Intermediary results
 
-::::: incremental
+:::: incremental
 ::: fragment
--   Reproducible research is hard and may feel overwhealming
+Reproducible research is hard and may feel overwhelming
 :::
 
 ::: fragment
--   Do not despair! With every step...
-    -   you are already one step ahead
-    -   you already improve the quality of your research (and of your life)
-    -   you learn broadly applicable technical skills
+Do not despair! With every step...
+
+- you are already one step ahead
+- you already improve the quality of your research (and of your life)
+- you learn broadly applicable technical skills
 :::
-:::::
+::::
 
 ------------------------------------------------------------------------
 
@@ -167,9 +170,9 @@ bibliography: references.bib
 
 ------------------------------------------------------------------------
 
-### Dynamic reporting: the ambition {.center}
+## Dynamic reporting: the ambition {.center}
 
-`raw data` $\rightarrow$ dynamic reporting file $\rightarrow$ `manuscript`
+[`raw data` $\rightarrow$ dynamic reporting file $\rightarrow$ `manuscript`]{style="font-size: 1.5em;"}
 
 ------------------------------------------------------------------------
 
@@ -195,13 +198,12 @@ bibliography: references.bib
 
 ![](img/implementation-timeline.png){width="733"}
 
-
-----
+------------------------------------------------------------------------
 
 ### Some implementations
- 
+
 |   | File | Code | Markup | Output formats |
-|--------------|--------------|--------------|--------------|------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | Sweave | .Rnw | R | LaTeX | pdf, tex |
 | R Markdown | .Rmd | R | Markdown | pdf, html, tex, docx, pptx |
 | Jupyter Notebook | .ipynb | Julia, Python, R | Markdown | pdf, html, tex, py, ... |
@@ -241,29 +243,27 @@ bibliography: references.bib
 
 ### The Swiss Reproducibility Network Academy
 
-
-:::: {.columns}
-
+::::: columns
 ::: {.column width="75%"}
-- Early career researchers section of the SwissRN
+-   Early career researchers section of the SwissRN
 
-- Goal 1: Connect young researchers interested in reproducibility in Switzerland
-- Goal 2: Improve reproducibility of research in Switzerland
+-   Goal 1: Connect young researchers interested in reproducibility in Switzerland
 
-- How to join? 
-  * young researchers based in Switzerland (working language is English)
-  * strong interest in good research practices and reproducibility 
-  * every field is welcome (diversity is the key!)
+-   Goal 2: Improve reproducibility of research in Switzerland
 
-- More information: <https://www.swissrn.org/contents/academy/>
+-   How to join?
+
+    -   young researchers based in Switzerland (working language is English)
+    -   strong interest in good research practices and reproducibility
+    -   every field is welcome (diversity is the key!)
+
+-   More information: <https://www.swissrn.org/contents/academy/>
 :::
 
 ::: {.column width="25%"}
 ![](img/swissrn_logo.png)
 :::
-
-::::
-
+:::::
 
 ------------------------------------------------------------------------
 
