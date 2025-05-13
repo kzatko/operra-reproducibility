@@ -121,7 +121,7 @@ This type of text editing is different from WYSIWYG (*What you see is what you g
 ::: {#tip-chunks .callout-tip collapse="false"}
 #### Code execution options
 
-The code chunks are delimited by ```` ```{r} ```` (you can specify other languages like Python, Julia, ObservableJS). For each code you can add *execution options* to the code chunks with `#|`, for example `#| echo: false` will not display the code. In Rstudio you can see the options available if you type `#|` and then press the TAB ⭾ key on your keyboard . These options can be set globally for the entire document on the YAML header (under `execute:`).
+The code chunks are delimited by ```` ```{r} ```` (you can specify other languages like Python, Julia, ObservableJS). For each code you can add *execution options* to the code chunks with `#|`, for example `#| echo: false` will not display the code. In Rstudio you can see the options available if you type `#|` and then press the TAB key on your keyboard . These options can be set globally for the entire document on the YAML header (under `execute:`).
 :::
 
 #### Load libraries
@@ -204,6 +204,33 @@ datclean |>
 
 We can now refer to [@fig-names] in the text using `[@fig-label]`.
 
+### Another plot
+
+We can also plot the occurence of a name over time. Here we choose Emma and Matteo.
+
+```{r}
+#| label: fig-names-over-time
+#| fig-cap: "Popularity of the names Matteo and Emma over time."
+#| message: false
+datclean |>
+  group_by(sex, name, year) |>
+  summarise(births = sum(births)) |>
+  filter(name %in% c("Emma", "Matteo")) |>
+  ggplot(aes(x = year, y = births, color = name)) +
+  geom_line() +
+  scale_color_viridis_d() +
+  labs(x = "Year", y = "Births", 
+       title = "") +
+  theme_minimal() +
+  theme(legend.title = element_blank())
+```
+
+::: {.callout-note appearance="minimal"}
+## Optional exercise
+
+Try it with your own name!
+:::
+
 ### Inline code
 
 We can use [inline code](https://quarto.org/docs/computations/inline-code.html) to dynamically insert data summaries into text. For example,
@@ -262,7 +289,7 @@ Try to explore different options for code execution:
 
 # Practical tips
 
-- Always `sessionInfo()` or similar to see which packages/environment was used to generate a report
+- Always add `sessionInfo()` or an equivalent to your report to show which packages/environment were used to generate the report
 - Use relative paths
 - Recompile your reports frequently to spot errors quickly
 - ....
