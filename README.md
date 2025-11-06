@@ -31,7 +31,7 @@ docker build -t pyverse .
 Run container as live dev session:
 
 ```{bash}
-docker run -d -p 8787:8787 -e PASSWORD=rstudio \
+docker run --rm -d -p 8787:8787 -e PASSWORD=rstudio \
   -v "$(pwd)":/home/rstudio/project pyverse
 ```
 
