@@ -341,7 +341,7 @@ A typical entry from a BibTeX bibliography file looks like this:
 }
 ```
 
-These files can either be created manually o with a reference manager (e.g., [Zotero](https://www.zotero.org/)).
+These files can either be created manually or with a reference manager (e.g., [Zotero](https://www.zotero.org/)).
 
 ::: {.callout-tip collapse="false"}
 #### References in RStudio

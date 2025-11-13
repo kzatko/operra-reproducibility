@@ -2,7 +2,7 @@
 title: | 
   Reproducible Research Workflows \
   with R and Quarto -- Getting Started
-subtitle: A Workshop by the Center for Reproducible Science
+subtitle: A Workshop by the Center for Reproducible Science and Research Synthesis
 date:  "November 14, 2025"
 date-format: long
 author:
@@ -30,7 +30,7 @@ format:
     embed-resources: true
     progress: true
     slide-number: true
-    footer: "Center for Reproducible Science | [Home](../index.qmd)"
+    footer: "Center for Reproducible Science and Research Synthesis | [Home](../index.qmd)"
     title-slide-attributes:
       data-background-size: contain
       data-background-position: bottom
