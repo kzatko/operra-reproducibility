@@ -313,4 +313,19 @@ make docker-report
 
 ------------------------------------------------------------------------
 
+
+## CRS Primers
+
+:::::: columns
+::: {.column width="45%"}
+![<https://doi.org/10.5281/zenodo.15792190>](img/primer-make.png)
+:::
+
+:::: {.column width="45%"}
+![<https://doi.org/10.5281/zenodo.13757230>](img/primer-containers.png)
+::::
+:::::
+
+------------------------------------------------------------------------
+
 ## References {.smaller}
