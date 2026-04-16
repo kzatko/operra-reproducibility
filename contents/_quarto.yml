@@ -33,37 +33,37 @@ website:
             menu:
               - text: "Slides"
                 href: ./module_1_version_control/slides/index.qmd
-              - text: "Hands-On Demo"
+              - text: "Hands-on"
                 href: ./module_1_version_control/demo/index.qmd
 
           - text: "2. Dynamic Reporting"
             menu:
               - text: "Slides"
                 href: ./module_2_dynamic_reporting/slides/index.qmd
-              - text: "Hands-On Demo (R)"
+              - text: "Hands-on (R)"
                 href: ./module_2_dynamic_reporting/demo_R/index.qmd
-              - text: "Hands-On Demo (Python)"
+              - text: "Hands-on (Python)"
                 href: ./module_2_dynamic_reporting/demo_py/index.qmd
 
           - text: "3. Workflow Management"
             menu:
               - text: "Slides"
                 href: ./module_3_workflow_management/slides/index.qmd
-              - text: "Hands-On Demo"
+              - text: "Hands-on"
                 href: ./module_3_workflow_management/demo/index.qmd
 
           - text: "4. Containers"
             menu:
               - text: "Slides"
                 href: ./module_4_containers/slides/index.qmd
-              - text: "Hands-On Demo"
+              - text: "Hands-on"
                 href: ./module_4_containers/demo/index.qmd
 
           - text: "5. Sharing & Publishing"
             menu:
               - text: "Slides"
                 href: ./module_5_sharing_publishing/slides/index.qmd
-              - text: "Hands-On Demo"
+              - text: "Hands-on"
                 href: ./module_5_sharing_publishing/demo/index.qmd
 
 format:

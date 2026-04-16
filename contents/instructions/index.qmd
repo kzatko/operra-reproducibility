@@ -1,143 +1,16 @@
 ---
-title: "Installation Instructions" 
-author:
-  - name: "Peter Degen"
-    orcid: 0009-0004-0706-9200
+title: "Requirements" 
 
-  - name: "Gorka Fraga González"
-    orcid: 0000-0002-1857-8607
-    
-  - name: "Fabio Molo"
-    orcid: 0000-0001-9320-5854
-
-  - name: "Samuel Pawel"
-    orcid: 0000-0003-2779-320X
-date: "November 14, 2025"
+date: today
 
 ---
 
-## Requirements 
+## Option 1: Local installation
 
-### R and RStudio
+You need access to a computer with the following software installed:
 
-To follow along in the hands-on part of the workshop, you need to have R and RStudio (v2022.07 or later) installed, which can be downloaded here: <https://www.r-project.org/> and here: <https://posit.co/download/rstudio-desktop/>. ```Quarto``` is then included in the RStudio installation. 
+## Option 2: Cloud environement
 
-### R Packages
+Make sure you have an account on the following platforms:
 
-We will use the following additional R packages in the workshop. You can install them on the spot or beforehand by typing the following code in the **R console**: 
-```r
-install.packages(c("quarto", "dplyr", "ggplot2"))
-``` 
 
-### LateX for rendering PDFs (optional)
-
-To render documents in PDF format, ```Quarto``` needs to be able to access ```LaTeX```. If you do not already have ```LaTeX``` installed, you can install the light-weight version ```TinyTex``` by typing the following in your **Terminal**:
-
-```bash
-quarto install tinytex
-```
-
-Additional instructions regarding ```LaTeX```, can be found here: <https://quarto.org/docs/output-formats/pdf-basics.html>
-
-## Alternative 1: Working from the Posit cloud (optional)
-
-If you do not want to install anything on your computer you can also use a cloud version of R and RStudio. Sign up at the **Posit Cloud** (<https://login.posit.cloud>) and:
-
--  register with your email address and choose a password;
--  select the "Free Cloud" subscription option.
--  Once logged in, go to your workspace and click on `New Project` (top right corner), then choose `New RStudio Project`.  
-
-## Alternative 2: Python (optional)
-
-In the workshop we will focus on R and RStudio for demonstration, but ```Quarto``` can also be used with Python instead of R and with VS Code, Jupyter Notebooks or other development environments instead of RStudio.
-
-To get up and running with Python, first install Quarto and pick your favorite development environment by following the [instructions here](https://quarto.org/docs/get-started/) (we will use VS Code in the hands-on demo). If you don't yet have Python 3 on your system, we recommend you [install version 3.12.3](https://www.python.org/downloads/release/python-3123/) to ensure maximum compatibility with the version used in the hands-on demo. We will further use the following Python packages in the workshop: `pandas matplotlib numpy jupyter itables seaborn`. It is best practice to always install Python packages in virtual environments, for example, using [venv](https://docs.python.org/3/library/venv.html) (included in Python) or [conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html) (separate installation). Moreover, for improved reproducibility, it is best to install the exact package versions and their dependencies using an environment specification file such as `requirements.txt` (venv) or `environment.yaml` (conda). Pick one and execute the following commands in your terminal to get started:
-
-::: {.panel-tabset}
-
-#### venv
-
-```bash
-mkdir quarto-workshop
-cd quarto-workshop
-wget -O requirements.txt https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-unige/-/raw/main/requirements.txt?ref_type=heads
-python -m venv quarto-env
-source quarto-env/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-#### conda
-
-```bash
-mkdir quarto-workshop
-cd quarto-workshop
-wget -O environment.yaml https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-unige/-/raw/main/environment.yaml?ref_type=heads
-conda env create --file environment.yaml python=3.12.3
-conda activate quarto-env
-```
-
-::: {.callout-caution}
-##### Kernels from Conda
-
-If you are using a kernel that is contained within an external conda environment you need to take an extra step to make sure it is recognized by Quarto. Please follow the instructions here to make conda managed kernels available:
-
-<https://github.com/Anaconda-Platform/nb_conda_kernels#use-with-nbconvert-voila-papermill>
-
-Note that this step is not required if you are merely using conda with Quarto. It applies to using kernels other than the default Python kernel that happen to be installed within a conda environment separate from the one you are using.
-:::
-
-:::
-
-## Alternative 3: Docker (optional)
-
-This option is for advanced users who have [Docker](https://www.docker.com/) installed on their system. Execute the following commands in your terminal to build the workshop image:
-
-```bash
-mkdir quarto-workshop
-cd quarto-workshop
-wget -O Dockerfile https://gitlab.uzh.ch/crsuzh/workshop-quarto-2025-unige/-/raw/main/Dockerfile?ref_type=heads
-docker build -t pyverse .
-```
-
-Run a live dev session:
-
-```bash
-docker run -d -p 8787:8787 -e PASSWORD=rstudio \
-  --rm -v "$(pwd)":/home/rstudio/project pyverse
-```
-
-::: {.panel-tabset}
-
-### R
-
-Open RStudio Server at <http://localhost:8787/> and create a new `.qmd` Quarto file by going to `File` > `New File` > `Quarto Document`. 
-
-### Python
-
-You can also use Python in RStudio, but the setup can be more tricky. You can render documents with only Python code chunks, but executing Python code chunks interactively (or rendering documents with both R and Python code) requires the `reticulate` package, which is not installed in the image.
-
-A better alternative is to use a live coding session using a [VS Code Dev Container](https://code.visualstudio.com/docs/devcontainers/containers). First, open the workshop directory in VS Code (installed on your host machine) and install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension. Then, create a `.devcontainer/devcontainer.json` file with the following contents:
-
-```{json}
-{
-  "name": "Quarto Dev",
-  "image": "pyverse",
-  "mounts": ["source=${localWorkspaceFolder},target=/workspaces,type=bind"],
-  "workspaceFolder": "/workspaces",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "quarto.quarto",
-        "ms-python.python",
-        "rdebugger.r-debugger",
-        "ms-toolsai.jupyter"
-      ]
-    }
-  },
-  "postCreateCommand": "quarto check"
-}
-```
-
-Finally, hit `Ctrl` + `Shift` + `P` and enter `Dev Containers: Reopen in Container`. This will reopen the VS Code session inside the running container, allowing you to execute code and render Quarto documents using the container environment.
-:::

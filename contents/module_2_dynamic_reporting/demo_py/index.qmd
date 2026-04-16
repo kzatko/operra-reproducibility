@@ -1,18 +1,8 @@
 ---
-title: Hands-On Demo (Python)
-subtitle: Reproducible and Dynamic Reporting with Python and Quarto
+title: "Hands-on: Dynamic Reporting with Python"
 author:    
   - name: "Peter Degen"
     orcid: 0009-0004-0706-9200
-
-  - name: "Gorka Fraga González"
-    orcid: 0000-0002-1857-8607
-
-  - name: "Fabio Molo"
-    orcid: 0000-0001-9320-5854
-    
-  - name: "Samuel Pawel"
-    orcid: 0000-0003-2779-320X
 format:
   html:
     toc-depth: 4
@@ -24,7 +14,7 @@ engine: jupyter
 bibliography: references.bib
 ---
 
-This hands-on demo requires Python and Quarto. Visit the [instructions](../../instructions/index.qmd) page to learn how to install them. We will further assume that you are using Quarto with VS Code (make sure you have the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)), although most of this demo is editor-agnostic.
+This hands-on requires Python and Quarto. Visit the [instructions](../../instructions/index.qmd) page to learn how to install them. We will further assume that you are using Quarto with VS Code (make sure you have the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)), although most of this demo is editor-agnostic.
 
 
 # Creating a Quarto file
@@ -311,7 +301,7 @@ Compute the total number of births in the data set and then display it via an in
 
 ## References
 
-In Quarto, it is also possible to include a bibliography file in BibTeX format (with .bib file extension) to automatically generate citations and a bibliography (<https://quarto.org/docs/authoring/citations.html>). This file has to be specified in the YAML header. In this demo, we have a `references.bib` file in the same directory as this .qmd file, so we specify:
+In Quarto, it is also possible to include a bibliography file in BibTeX format (with .bib file extension) to automatically generate citations and a bibliography (<https://quarto.org/docs/authoring/citations.html>). This file has to be specified in the YAML header. In this hands-on, we have a `references.bib` file in the same directory as this .qmd file, so we specify:
 
 ``` yaml
 bibliography: references.bib

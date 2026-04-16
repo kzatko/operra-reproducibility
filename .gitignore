@@ -10,3 +10,6 @@ _freeze/
 _site 
 _freeze
 *quarto_ipynb
+
+.DS_Store
+/.claude/

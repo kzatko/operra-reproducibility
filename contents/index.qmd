@@ -1,64 +1,44 @@
 ---
-title: Reproducible Research Workflows — Extended Workshop
+title: SwissRN Computational Reproducibility Workshop
 sidebar: false
 date: last-modified
 author:
-  - name: "Peter Degen"
-    orcid: 0009-0004-0706-9200
-
-  - name: "Gorka Fraga González"
-    orcid: 0000-0002-1857-8607
-
   - name: "Fabio Molo"
     orcid: 0000-0001-9320-5854
 
-  - name: "Samuel Pawel"
-    orcid: 0000-0003-2779-320X
+  - name: "Daniel Stekhoven"
+
+listing:
+  type: grid
+  id: main-listing
+  fields: [title, subtitle]
+  grid-columns: 4
+  sort: false
+  contents:
+    - /module_1_version_control/slides/index.qmd
+    - /module_1_version_control/demo/index.qmd
+    - /module_2_dynamic_reporting/slides/index.qmd
+    - /module_2_dynamic_reporting/demo_R/index.qmd
+    - /module_2_dynamic_reporting/demo_py/index.qmd
+    - /module_3_workflow_management/slides/index.qmd
+    - /module_3_workflow_management/demo/index.qmd
+    - /module_4_containers/slides/index.qmd
+    - /module_4_containers/demo/index.qmd
+    - /module_5_sharing_publishing/slides/index.qmd
+    - /module_5_sharing_publishing/demo/index.qmd
 
 toc: false
 page-layout: full
 ---
 
-This workshop, organized by the [Center for Reproducible Science and Research Synthesis (CRS)](https://www.crs.uzh.ch/en.html) of the University of Zurich, introduces participants to a full reproducible research workflow. Each module combines conceptual slides with a hands-on demo.
+This workshop, organized by the [Swiss Reproducibility Network](https://www.swissrn.org) introduces participants to a full reproducible research workflow.
 
 # Modules
 
-## [1. Version Control with Git](module_1_version_control/slides/index.qmd)
+::: {#main-listing}
+:::
 
-Tracking changes, collaborating, and archiving research with Git.
-
-- [Slides](module_1_version_control/slides/index.qmd)
-- [Hands-On Demo](module_1_version_control/demo/index.qmd)
-
-## [2. Dynamic Reporting with R and Quarto](module_2_dynamic_reporting/slides/index.qmd)
-
-Writing reproducible manuscripts and analyses using Quarto.
-
-- [Slides](module_2_dynamic_reporting/slides/index.qmd)
-- [Hands-On Demo (R)](module_2_dynamic_reporting/demo_R/index.qmd)
-- [Hands-On Demo (Python)](module_2_dynamic_reporting/demo_py/index.qmd)
-
-## [3. Workflow Management](module_3_workflow_management/slides/index.qmd)
-
-Automating multi-step computational pipelines with Make and targets.
-
-- [Slides](module_3_workflow_management/slides/index.qmd)
-- [Hands-On Demo](module_3_workflow_management/demo/index.qmd)
-
-## [4. Software Containers](module_4_containers/slides/index.qmd)
-
-Encapsulating computational environments with Docker and Rocker.
-
-- [Slides](module_4_containers/slides/index.qmd)
-- [Hands-On Demo](module_4_containers/demo/index.qmd)
-
-## [5. Sharing and Publishing](module_5_sharing_publishing/slides/index.qmd)
-
-Publishing reproducible reports with GitLab Pages, Zenodo, and OSF.
-
-- [Slides](module_5_sharing_publishing/slides/index.qmd)
-- [Hands-On Demo](module_5_sharing_publishing/demo/index.qmd)
 
 ---
 
-Visit the [Instructions](instructions/index.qmd) page for software installation and setup.
+Visit the [Requirements](instructions/index.qmd) page for software installation and setup.
