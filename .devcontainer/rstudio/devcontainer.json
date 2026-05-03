@@ -1,0 +1,22 @@
+{
+  "name": "Operra - RStudio (project-wide)",
+  "dockerComposeFile": ["../../docker-compose.yaml"],
+  "service": "pyverse",
+  "workspaceFolder": "/home/rstudio/project",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio Server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
+
