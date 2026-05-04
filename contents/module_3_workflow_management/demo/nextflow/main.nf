@@ -77,6 +77,9 @@ process POLARS_PROCESS {
 
 process FINAL_REPORT {
   publishDir "${params.outdir}", mode: 'copy'
+  // Copy inputs so Quarto resolves includes relative to the work dir,
+  // not the symlink target in the nextflow source directory.
+  stageInMode 'copy'
 
   input:
   path "4_report.qmd"
