@@ -77,9 +77,6 @@ process POLARS_PROCESS {
 
 process FINAL_REPORT {
   publishDir "${params.outdir}", mode: 'copy'
-  // Copy inputs so Quarto resolves includes relative to the work dir,
-  // not the symlink target in the nextflow source directory.
-  stageInMode 'copy'
 
   input:
   path "4_report.qmd"
@@ -92,7 +89,14 @@ process FINAL_REPORT {
   path "4_report.html"
 
   script:
+  // Render in a temp dir outside the repo so Quarto never finds the
+  // parent _quarto.yml website project and outputs to the wrong place.
   """
+  workdir=\$(pwd)
+  tmpdir=\$(mktemp -d)
+  cp 4_report.qmd example_data.csv 1_derived.csv 2_summary.txt 3_processed.csv "\$tmpdir/"
+  cd "\$tmpdir"
   quarto render 4_report.qmd --to html --output 4_report.html
+  cp 4_report.html "\$workdir/"
   """
 }
