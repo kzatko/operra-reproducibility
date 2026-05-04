@@ -1,55 +1,61 @@
 # Minimal workshop demo pipeline:
-# 1. Python centres the values in example_data.csv  → results/1_derived.csv
-# 2. R reads 1_derived.csv and produces summary stats → results/2_summary.txt
-# 3. Python (polars) processes 1_derived.csv            → results/3_processed.csv
-# 4. Quarto collects outputs into an HTML report        → results/4_report.html
+# 1. Python centres the values in example_data.csv  → work/1_derived.csv
+# 2. R reads 1_derived.csv and produces summary stats → work/2_summary.txt
+# 3. Python (polars) processes the derived data       → work/3_processed.csv
+# 4. Quarto collects outputs into an HTML report      → results/4_report.html
 #
 # Run with:  snakemake --cores 1
+# Run from any directory with:
+#   snakemake --snakefile /path/to/Snakefile --cores 1
+
+# Absolute path to this Snakefile's directory — keeps all paths stable
+# regardless of where snakemake is invoked from.
+D = workflow.basedir
 
 rule all:
     input:
-        "results/4_report.html"
+        f"{D}/results/4_report.html"
 
 
 rule py_derive:
     input:
-        data="example_data.csv",
-        script="1_derive.py",
+        data=f"{D}/example_data.csv",
+        script=f"{D}/1_derive.py",
     output:
-        "work/1_derived.csv",
+        f"{D}/work/1_derived.csv",
     shell:
         "python3 {input.script} --input {input.data} --output {output}"
 
 
 rule r_summary:
     input:
-        data="work/1_derived.csv",
-        script="2_summary.R",
+        data=f"{D}/work/1_derived.csv",
+        script=f"{D}/2_summary.R",
     output:
-        "work/2_summary.txt",
+        f"{D}/work/2_summary.txt",
     shell:
         "Rscript {input.script} --input {input.data} --output {output}"
 
 
-rule final_report:
-    input:
-        qmd="4_report.qmd",
-        data="example_data.csv",
-        derived="work/1_derived.csv",
-        summary="work/2_summary.txt",
-        processed="work/3_processed.csv",
-    output:
-        "results/4_report.html",
-    shell:
-        "quarto render {input.qmd} --to html --output-dir results/"
-
-
 rule polars_process:
     input:
-        data="work/1_derived.csv",
-        summary="work/2_summary.txt",
-        script="3_polars_process.py",
+        data=f"{D}/work/1_derived.csv",
+        summary=f"{D}/work/2_summary.txt",
+        script=f"{D}/3_polars_process.py",
     output:
-        "work/3_processed.csv",
+        f"{D}/work/3_processed.csv",
     shell:
         "python3 {input.script} --input {input.data} --summary {input.summary} --output {output}"
+
+
+rule final_report:
+    input:
+        qmd=f"{D}/4_report.qmd",
+        data=f"{D}/example_data.csv",
+        derived=f"{D}/work/1_derived.csv",
+        summary=f"{D}/work/2_summary.txt",
+        processed=f"{D}/work/3_processed.csv",
+    output:
+        f"{D}/results/4_report.html",
+    shell:
+        "quarto render {input.qmd} --to html --output-dir $(dirname {output})"
