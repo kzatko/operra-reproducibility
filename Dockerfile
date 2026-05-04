@@ -5,7 +5,7 @@ RUN install2.r ggplot2 dplyr kableExtra
 RUN apt-get update && apt-get install -y \
     python3-pip \
     git \
-    default-jdk-headless \
+    openjdk-21-jdk-headless \
     curl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
