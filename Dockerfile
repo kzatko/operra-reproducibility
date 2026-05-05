@@ -7,8 +7,12 @@ RUN install2.r ggplot2 dplyr kableExtra && \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir --break-system-packages snakemake -r requirements.txt && \
-    curl -s https://get.nextflow.io | bash && mv nextflow /usr/local/bin/
+RUN python3 -m venv /opt/venv && \
+    /opt/venv/bin/pip install --no-cache-dir snakemake -r requirements.txt && \
+    curl -s https://get.nextflow.io | bash && mv nextflow /usr/local/bin/ && \
+    chown -R rstudio:rstudio /opt/venv
+
+ENV PATH=/opt/venv/bin:$PATH
 
 EXPOSE 8787
 ENV USER=rstudio
