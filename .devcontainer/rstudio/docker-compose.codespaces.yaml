@@ -2,3 +2,7 @@ services:
   pyverse:
     image: ghcr.io/a1eksb/reproducability:rstudio
     build: !reset null
+    # Codespaces port forwarding is more reliable when the published port binds
+    # to all interfaces (instead of loopback-only as in the local compose file).
+    ports: !override
+      - "8787:8787"
