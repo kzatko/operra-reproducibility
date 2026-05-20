@@ -8,24 +8,6 @@ author:
 
   - name: "Daniel Stekhoven"
 
-listing:
-  type: grid
-  id: main-listing
-  fields: [title, subtitle]
-  grid-columns: 4
-  sort: false
-  contents:
-    - /module_1_version_control/slides/index.qmd
-    - /module_1_version_control/demo/index.qmd
-    - /module_2_dynamic_reporting/slides/index.qmd
-    - /module_2_dynamic_reporting/demo_R/index.qmd
-    - /module_2_dynamic_reporting/demo_py/index.qmd
-    - /module_3_workflow_management/slides/index.qmd
-    - /module_3_workflow_management/demo/index.qmd
-    - /module_4_containers/slides/index.qmd
-    - /module_4_containers/demo/index.qmd
-    - /module_5_sharing_publishing/slides/index.qmd
-    - /module_5_sharing_publishing/demo/index.qmd
 
 toc: false
 page-layout: full
@@ -35,10 +17,33 @@ This workshop, organized by the [Swiss Reproducibility Network](https://www.swis
 
 # Modules
 
-::: {#main-listing}
-:::
+**Module 1: Version Control**
+
+- [Version Control with Git](module_1_version_control/slides/index.qmd)
+- [Hands-on: Version Control with Git](module_1_version_control/demo/index.qmd)
+
+**Module 2: Dynamic Reporting**
+
+- [Dynamic Reporting with Quarto](module_2_dynamic_reporting/slides/index.qmd)
+- [Hands-on: Dynamic Reporting with R](module_2_dynamic_reporting/demo_R/index.qmd)
+- [Hands-on: Dynamic Reporting with Python](module_2_dynamic_reporting/demo_py/index.qmd)
+
+**Module 3: Workflow Management**
+
+- [Workflow Management](module_3_workflow_management/slides/index.qmd)
+- [Hands-on: Workflow Management](module_3_workflow_management/demo/index.qmd)
+
+**Module 4: Software Containers**
+
+- [Software Containers](module_4_containers/slides/index.qmd)
+- [Hands-on: Software Containers](module_4_containers/demo/index.qmd)
+
+**Module 5: Sharing and Publishing**
+
+- [Sharing and Publishing](module_5_sharing_publishing/slides/index.qmd)
+- [Hands-on: Sharing and Publishing](module_5_sharing_publishing/demo/index.qmd)
 
 
 ---
 
-Visit the [Requirements](instructions/index.qmd) page for software installation and setup.
+Visit the [Instructions](instructions/index.qmd) page for software installation and setup.
