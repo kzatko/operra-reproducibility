@@ -33,6 +33,9 @@ website:
             href: ./instructions/index.qmd
 
         right:
+          - text: "0. Introduction"
+            href: ./module_0_introduction/slides/index.qmd
+
           - text: "1. Version Control"
             menu:
               - text: "Slides"

@@ -1,6 +1,5 @@
-
 ---
-title: "Bonus Slides Dynamic Reporting"
+title: "Introduction: Computational Reproducibility"
 date: today
 date-format: long
 author:
@@ -39,7 +38,7 @@ A (too) simple definition:
 
 [The **same analysis**]{.fragment} [of the **same data**]{.fragment} [produces the **same results**]{.fragment}
 
-\ 
+\
 
 ::: fragment
 ![@Turing2024](img/Turing-reproducible.png){fig-align="center" width="50%"}
@@ -51,7 +50,7 @@ A (too) simple definition:
 ![@samuel2024](img/samuel2024.png){fig-align="center" width="70%"}
 
 ::: incremental
--   Attempted to rerun **22,578 Jupyter notebooks** from 3,467 PubMed publications 
+-   Attempted to rerun **22,578 Jupyter notebooks** from 3,467 PubMed publications
 -   For 10,388 of these, all declared dependencies could be installed successfully
 -   1,203 notebooks ran through without any errors
 -   **879 notebooks (4%)** produced results identical to those reported in the original
@@ -169,56 +168,6 @@ Do not despair! With every step...
 :::::::
 ::::::::::::
 
-
-
-------------------------------------------------------------------------
-
-## Context and terminology
-
-<br>
-
-![@theturingwaycommunity2022](img/turingway_reproducible_matrix.jpg){fig-align="center" width="75%"}
-
-------------------------------------------------------------------------
-
-
-## Replicability: Example
-
-![](img/replicable.png){.absolute right="0" top="0" height="75"}
-
-![@opensciencecollaboration2015](img/replicability_open_science_collaboration.jpeg){fig-align="center" width="640"}
-
-------------------------------------------------------------------------
-
-## Robustness: Example
-
-![](img/robust.png){.absolute right="0" top="0" height="75"}
-
-::::: {.columns align="center"}
-::: {.column width="50%"}
-![@Gould2025](img/ecology_1.png)
-:::
-
-::: {.column width="50%"}
-![](img/ecology_2.png){height="400"}
-:::
-:::::
-
-------------------------------------------------------------------------
-
-## Generalizability
-
-![](img/generalizable.png){.absolute right="0" top="0" height="75"}
-
-<br>
-
-
-![@Turing2024](img/Turing-generalisable.png){fig-align="center" width="50%"}
-
-::: fragment
-$\rightarrow$ **Reproducibility + Robustness + Replicability necessary for Generalizabilty!**
-:::
-
 ------------------------------------------------------------------------
 
 ## The Swiss Reproducibility Network Academy
@@ -279,7 +228,7 @@ $\rightarrow$ **Reproducibility + Robustness + Replicability necessary for Gener
 
 1.  **Introduction** -- what is computational reproducibility?
 
-2.  **Version control** 
+2.  **Version control**
 
 3.  **Dynamic reporting**
 

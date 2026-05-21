@@ -17,6 +17,10 @@ This workshop, organized by the [Swiss Reproducibility Network](https://www.swis
 
 # Modules
 
+**Module 0: Introduction**
+
+- [Introduction: Computational Reproducibility](module_0_introduction/slides/index.qmd)
+
 **Module 1: Version Control**
 
 - [Version Control with Git](module_1_version_control/slides/index.qmd)
